@@ -1,21 +1,25 @@
-package CommandPattern.Word;
+package CommandPattern.Docs;
 
 import java.io.*;
 import java.util.Collection;
 import java.util.LinkedList;
 
-public class Word {
+public class Docs {
     LinkedList<String> linkedList;
 
-    public Word() {
+    public Docs() {
         this.linkedList = new LinkedList<>();
     }
 
-    public void save(Collection<String> words) {
+    public void save(String word) {
+        linkedList.add(word);
+    }
+
+    public void saveAll(Collection<String> words) {
         linkedList.addAll(words);
     }
 
-    public void saveToFile(){
+    public void saveToFile() {
         writeFile();
         this.linkedList = new LinkedList<>();
     }
@@ -30,7 +34,7 @@ public class Word {
 
     public void delete(String word) {
         if (linkedList.isEmpty()) return;
-        linkedList.removeLastOccurrence(word);
+        linkedList.remove(word);
     }
 
     public void undoLast() {
