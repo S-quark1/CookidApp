@@ -1,2 +1,5 @@
-package StrategyPattern.Behavior.SoundBehavior;public interface IMakeSoundBehavior {
+package StrategyPattern.Behavior.SoundBehavior;
+
+public interface IMakeSoundBehavior {
+    public void sound();
 }

@@ -1,2 +1,6 @@
-package CommandPattern.Commands;public interface ICommand {
+package CommandPattern.Commands;
+
+public interface ICommand {
+    public void execute();
+    public void unexecute();
 }
