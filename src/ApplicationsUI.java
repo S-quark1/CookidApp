@@ -1,5 +1,6 @@
-import FactoryPattern.Dish;
+import CommandPattern.DocsApp;
 import FactoryPattern.PastaMammaMiaApp;
+import StrategyPattern.RobotsShowoffApp;
 
 import java.util.Scanner;
 
@@ -11,9 +12,9 @@ public class ApplicationsUI {
         whileStatement:
         while (true){
             System.out.println("\nApp list:");
-            System.out.println("1. PastaMammaMia Application");
-            System.out.println("2. ********");
-            System.out.println("3. ********");
+            System.out.println("1. PastaMammaMia App            -- Factory Pattern");
+            System.out.println("2. Docs Application (demo)      -- Command Pattern");
+            System.out.println("3. Robots Showoff               -- Strategy Pattern");
             System.out.println("4. ********");
             System.out.println("5. ********");
             System.out.println("0. Turn off device");
@@ -27,7 +28,12 @@ public class ApplicationsUI {
                     pastaMammaMiaApp.start();
                     break;
                 case 2:
+                    DocsApp docsApp = new DocsApp();
+                    docsApp.start();
+                    break;
                 case 3:
+                    RobotsShowoffApp robotsShowoffApp = new RobotsShowoffApp();
+                    robotsShowoffApp.start();
                 case 4:
                 case 5:
                     System.out.println("App does not exists!");

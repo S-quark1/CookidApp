@@ -13,6 +13,7 @@ public class SaveCommand implements ICommand{
 
     @Override
     public void execute() {
+        System.out.println("executed");
         docs.save(word);
     }
 

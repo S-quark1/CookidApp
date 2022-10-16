@@ -37,9 +37,9 @@ public class Docs {
         linkedList.remove(word);
     }
 
-    public void undoLast() {
-        if (linkedList.isEmpty()) return;
-        linkedList.removeLast();
+    public String undoLast() {
+        if (linkedList.isEmpty()) return null;
+        return linkedList.removeLast();
     }
 
     private boolean isEmpty() {
