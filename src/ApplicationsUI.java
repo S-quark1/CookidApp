@@ -1,5 +1,7 @@
 import CommandPattern.DocsApp;
+import Decorator.Decomain;
 import FactoryPattern.PastaMammaMiaApp;
+import Singleton.UISetting;
 import StrategyPattern.RobotsShowoffApp;
 
 import java.util.Scanner;
@@ -12,11 +14,12 @@ public class ApplicationsUI {
         whileStatement:
         while (true){
             System.out.println("\nApp list:");
-            System.out.println("1. PastaMammaMia App            -- Factory Pattern");
-            System.out.println("2. Docs Application (demo)      -- Command Pattern");
-            System.out.println("3. Robots Showoff               -- Strategy Pattern");
-            System.out.println("4. ********");
-            System.out.println("5. ********");
+            System.out.println("1. Robots Showoff               -- Strategy Pattern");
+            System.out.println("2. IMEI settings                -- Singleton Pattern");
+            System.out.println("3. PastaMammaMia App            -- Factory Pattern");
+            System.out.println("4. Christmas tree               -- Decorator Pattern");
+            System.out.println("5. Docs Application (demo)      -- Command Pattern");
+            System.out.println("6. ********");
             System.out.println("0. Turn off device");
 
             System.out.print("\nEnter option (1-5): ");
@@ -24,19 +27,27 @@ public class ApplicationsUI {
             int option = scanner.nextInt();
             switch (option) {
                 case 1:
+                    RobotsShowoffApp robotsShowoffApp = new RobotsShowoffApp();
+                    robotsShowoffApp.start();
+                    break;
+                case 2:
+                    UISetting uiSetting = new UISetting();
+                    uiSetting.start();
+                    break;
+                case 3:
                     PastaMammaMiaApp pastaMammaMiaApp = new PastaMammaMiaApp();
                     pastaMammaMiaApp.start();
                     break;
-                case 2:
+                case 4:
+                    Decomain decomain = new Decomain();
+                    decomain.start();
+                    break;
+                case 5:
                     DocsApp docsApp = new DocsApp();
                     docsApp.start();
                     break;
-                case 3:
-                    RobotsShowoffApp robotsShowoffApp = new RobotsShowoffApp();
-                    robotsShowoffApp.start();
-                case 4:
-                case 5:
-                    System.out.println("App does not exists!");
+                case 6:
+                    System.out.println("App does not exist!");
                     break;
                 case 0:
                     System.out.println("\nCookid shutdown....");
