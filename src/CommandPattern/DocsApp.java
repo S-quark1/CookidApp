@@ -24,24 +24,24 @@ public class DocsApp {
 
             System.out.print("\nEnter option (1-5): ");
 
-            int option = scanner.nextInt();
+            String option = scanner.next();
             switch (option) {
-                case 1:
+                case "1":
                     invoker.readFile(new ReadCommand(docs));
                     break;
-                case 2:
+                case "2":
                     System.out.println("enter: ");
                     scanner.nextLine(); // who knew that "nextInt() does not consume the '\n', so the next call to nextLine() consumes it"
                     String currentSentence = scanner.nextLine();
                     invoker.saveNewSentence(new SaveAllCommand(docs, Arrays.asList(currentSentence.split("\\s+"))));
                     break;
-                case 3:
+                case "3":
                     invoker.undoLastWord(new UndoLastCommand(docs));
                     break;
-                case 4:
+                case "4":
                     invoker.saveToFile(new SaveToFileCommand(docs));
                     break;
-                case 0:
+                case "0":
                     System.out.println("\nClosing application...");
                     break whileStatement;
                 default:

@@ -20,24 +20,24 @@ public class PastaMammaMiaApp {
 
             System.out.print("\nEnter option (1-5): ");
 
-            int option = scanner.nextInt();
+            String option = scanner.next();
             switch (option) {
-                case 1:
+                case "1":
                     dish = kitchen.createPasta(1, 1, "Spaghetti Bolognese");
                     break;
-                case 2:
+                case "2":
                     dish = kitchen.createPasta(2, 2, "Cheese Lasagne");
                     break;
-                case 3:
+                case "3":
                     dish = kitchen.createPasta(3, 2, "Macaroni and Cheese");
                     break;
-                case 4:
+                case "4":
                     dish = kitchen.createPasta(3, 1, "Macaroni Bolognese");
                     break;
-                case 5:
+                case "5":
                     dish = kitchen.createPasta(1, 3, "Spaghetti Carbonara");
                     break;
-                case 0:
+                case "0":
                     System.out.println("\nClosing application...");
                     break whileStatement;
                 default:

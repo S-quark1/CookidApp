@@ -25,27 +25,27 @@ public class RobotsShowoffApp {
 
             System.out.print("\nEnter option (1-5): ");
 
-            int option = scanner.nextInt();
+            String option = scanner.next();
             switch (option) {
-                case 1:
+                case "1":
                     robot = rb.createDancing();
                     break;
-                case 2:
+                case "2":
                     robot = rb.createMechanic();
                     break;
-                case 3:
+                case "3":
                     robot = rb.createSpider();
                     break;
-                case 4:
+                case "4":
                     robot = rb.createSwimming();
                     break;
-                case 5:
+                case "5":
                     robot = rb.createToy();
                     break;
-                case 6:
+                case "6":
                     robot = rb.createWooden();
                     break;
-                case 0:
+                case "0":
                     System.out.println("\nClosing application...");
                     break whileStatement;
                 default:
