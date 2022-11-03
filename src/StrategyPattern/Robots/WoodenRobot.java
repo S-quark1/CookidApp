@@ -9,7 +9,12 @@ public class WoodenRobot extends Robot{
     }
 
     @Override
+    public String getName() {
+        return "Wooden Robot";
+    }
+
+    @Override
     public void display() {
-        System.out.println("I'm a Wooden Robot");
+        System.out.println("yellow colored, wooden");
     }
 }

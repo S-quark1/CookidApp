@@ -4,7 +4,7 @@ import StrategyPattern.Behavior.MoveBehavior.IMoveBehavior;
 import StrategyPattern.Behavior.SoundBehavior.IMakeSoundBehavior;
 
 public abstract class Robot{
-    public abstract void display();
+    String name;
     IMoveBehavior moveBehavior;
     IMakeSoundBehavior makeSoundBehavior;
 
@@ -12,6 +12,9 @@ public abstract class Robot{
         this.moveBehavior = moveBehavior;
         this.makeSoundBehavior = makeSoundBehavior;
     }
+
+    public abstract void display();
+    public abstract String getName();
 
     public void move(){
         this.moveBehavior.move();

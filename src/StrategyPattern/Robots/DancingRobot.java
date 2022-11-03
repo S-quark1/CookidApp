@@ -9,7 +9,12 @@ public class DancingRobot extends Robot{
     }
 
     @Override
+    public String getName() {
+        return "Dancing Robot";
+    }
+
+    @Override
     public void display() {
-        System.out.println("I'm a Dancing Robot");
+        System.out.println("pink colored, steel and plastic");
     }
 }

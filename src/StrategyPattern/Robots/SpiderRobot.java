@@ -9,7 +9,12 @@ public class SpiderRobot extends Robot{
     }
 
     @Override
+    public String getName() {
+        return "Spider Robot";
+    }
+
+    @Override
     public void display() {
-        System.out.println("I'm a Spider Robot");
+        System.out.println("black colored, wool");
     }
 }

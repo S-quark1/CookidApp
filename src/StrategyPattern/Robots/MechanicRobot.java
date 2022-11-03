@@ -11,7 +11,12 @@ public class MechanicRobot extends Robot {
     }
 
     @Override
+    public String getName() {
+        return "Mechanic Robot";
+    }
+
+    @Override
     public void display() {
-        System.out.println("I'm a Mechanic Robot");
+        System.out.println("grey colored, steel");
     }
 }
