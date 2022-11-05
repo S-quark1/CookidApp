@@ -2,7 +2,7 @@ package StrategyPattern.Behavior.MoveBehavior;
 
 public class DanceBehavior implements IMoveBehavior{
     @Override
-    public void move() {
-        System.out.println("Dancing...");
+    public String move() {
+        return "Dancing...";
     }
 }

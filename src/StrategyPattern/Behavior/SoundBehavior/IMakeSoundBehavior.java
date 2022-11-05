@@ -1,5 +1,5 @@
 package StrategyPattern.Behavior.SoundBehavior;
 
 public interface IMakeSoundBehavior {
-    public void sound();
+    public String sound();
 }

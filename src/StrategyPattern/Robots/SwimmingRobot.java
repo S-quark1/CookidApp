@@ -14,7 +14,7 @@ public class SwimmingRobot extends Robot{
     }
 
     @Override
-    public void display() {
-        System.out.println("blue colored, steel and plastic");
+    public String display() {
+        return "blue colored, steel and plastic";
     }
 }

@@ -14,7 +14,7 @@ public class SpiderRobot extends Robot{
     }
 
     @Override
-    public void display() {
-        System.out.println("black colored, wool");
+    public String display() {
+        return "black colored, wool";
     }
 }

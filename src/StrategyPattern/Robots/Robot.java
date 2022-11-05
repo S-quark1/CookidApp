@@ -13,14 +13,14 @@ public abstract class Robot{
         this.makeSoundBehavior = makeSoundBehavior;
     }
 
-    public abstract void display();
+    public abstract String display();
     public abstract String getName();
 
-    public void move(){
-        this.moveBehavior.move();
+    public String move(){
+        return this.moveBehavior.move();
     }
 
-    public void sound(){
-        this.makeSoundBehavior.sound();
+    public String sound(){
+        return this.makeSoundBehavior.sound();
     }
 }

@@ -14,7 +14,7 @@ public class ToyRobot extends Robot{
     }
 
     @Override
-    public void display() {
-        System.out.println("green colored, plastic");
+    public String display() {
+        return "green colored, plastic";
     }
 }

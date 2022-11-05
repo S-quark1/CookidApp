@@ -29,9 +29,16 @@ public class RobotsShowoffApp {
                     robot = robotCreation();
                     break;
                 case "2":
-                    System.out.println("My robot collection:\n");
+                    if (map.isEmpty()){
+                        System.out.println("\n* No robots, please create one");
+                        break;
+                    }
+                    System.out.println("My robot collection:");
                     for (Map.Entry<Robot, Integer> entry : map.entrySet()) {
-                        System.out.println(entry.getKey().getName() + " - " + entry.getValue() + "/10");
+                        System.out.println("\n* "+entry.getKey().getName() + " - " + entry.getValue() + "/10");
+                        System.out.println("    Movement Behavior: "+entry.getKey().move());
+                        System.out.println("    Sound Behavior: "+entry.getKey().sound());
+                        System.out.println("    Properties: "+entry.getKey().display());
                     }
                     break;
                 case "0":
@@ -44,9 +51,9 @@ public class RobotsShowoffApp {
 
             if (robot != null) {
                 System.out.println(robot.getName());
-                robot.display();
-                robot.move();
-                robot.sound();
+                System.out.println(robot.display());
+                System.out.println(robot.move());
+                System.out.println(robot.sound());
 
                 int random_int = (int) Math.floor(Math.random() * (11));
                 map.put(robot, random_int);

@@ -14,7 +14,7 @@ public class DancingRobot extends Robot{
     }
 
     @Override
-    public void display() {
-        System.out.println("pink colored, steel and plastic");
+    public String display() {
+        return "pink colored, steel and plastic";
     }
 }

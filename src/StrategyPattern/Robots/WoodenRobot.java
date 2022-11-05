@@ -14,7 +14,7 @@ public class WoodenRobot extends Robot{
     }
 
     @Override
-    public void display() {
-        System.out.println("yellow colored, wooden");
+    public String display() {
+        return "yellow colored, wooden";
     }
 }

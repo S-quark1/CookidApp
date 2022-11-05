@@ -16,7 +16,7 @@ public class MechanicRobot extends Robot {
     }
 
     @Override
-    public void display() {
-        System.out.println("grey colored, steel");
+    public String display() {
+        return "grey colored, steel";
     }
 }
